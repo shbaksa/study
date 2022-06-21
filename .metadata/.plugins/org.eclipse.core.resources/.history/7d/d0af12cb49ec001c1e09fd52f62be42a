@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+ 	<!-- dat_write_ok.jsp -->
+
+	<!-- 실행될 쿼리문 
+	insert into dat(name,content,pwd,bid,writeday) values(?,?,?,?,now());
+	 -->
+	 
+	<% 
+		// dat_write_ok.jsp => 댓글폼에 입력한 값을 dat테이블에 저장하고 content로 이동
+		
+		// DB연결
+		Class.forName("com.mysql.jdbc.Driver");
+		String db = "jdbc:mysql://localhost:3306/first";
+		Connection conn = DriverManager.getConnection(db, "root", "1234");
+		
+		// request 
+	%>
